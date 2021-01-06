@@ -1,29 +1,143 @@
-<!-- =========================================================================================
-    File Name: Tree.vue
-    Description: Tree demo
-    ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-    Author: Pixinvent
-    Author URL: http://www.themeforest.net/user/pixinvent
-========================================================================================== -->
 <template>
-  <div id="page-tree-demo">
-    <tree-dropdown></tree-dropdown>
-    <tree-search-tree></tree-search-tree>
-    <tree-async-tree></tree-async-tree>
+
+ <div>
+  <div class="mt-5">
+    
+    <vs-tabs alignment="fixed">
+      <vs-tab label="Request">
+        <div><div>
+      <vs-table pagination max-items="7" search :data="users">
+
+     <template slot="thead">
+      <vs-th sort-key="email">ID</vs-th>
+      <vs-th sort-key="username">Supplier name</vs-th>
+      <vs-th sort-key="website">Price</vs-th>
+      <vs-th sort-key="id">Type</vs-th>
+      <vs-th sort-key="id">Status</vs-th>
+ 
+    </template>
+    <template slot-scope="{data}">
+      <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
+
+        <vs-td :data="data[indextr].id">
+          {{ data[indextr].id }}
+        </vs-td>
+         <vs-td :data="data[indextr].customername">
+          {{ data[indextr].customername }}
+        </vs-td>
+
+        <vs-td :data="data[indextr].price">
+          {{ data[indextr].price }}
+        </vs-td>
+
+        <vs-td :data="data[indextr].type">
+          {{ data[indextr].type }}
+        </vs-td>
+        <vs-td :data="data[indextr].status">
+          {{ data[indextr].status }}
+        </vs-td>
+      </vs-tr>
+    </template>
+  </vs-table>
+   </div></div>
+      </vs-tab>
+      <vs-tab label="Request already">
+        <div> <vs-table   pagination max-items="7" search :data="users">
+
+    <template slot="thead">
+      <vs-th sort-key="email">ID</vs-th>
+      <vs-th sort-key="username">Customer name</vs-th>
+      <vs-th sort-key="website">Price</vs-th>
+      <vs-th sort-key="id">Type</vs-th>
+      <vs-th sort-key="id">Status</vs-th>
+ 
+    </template>
+    <template slot-scope="{data}">
+      <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
+
+        <vs-td :data="data[indextr].id">
+          {{ data[indextr].id }}
+        </vs-td>
+         <vs-td :data="data[indextr].customername">
+          {{ data[indextr].customername }}
+        </vs-td>
+
+        <vs-td :data="data[indextr].price">
+          {{ data[indextr].price }}
+        </vs-td>
+
+        <vs-td :data="data[indextr].type">
+          {{ data[indextr].type }}
+        </vs-td>
+        <vs-td :data="data[indextr].status">
+          {{ data[indextr].status }}
+        </vs-td>
+      </vs-tr>
+    </template>
+  </vs-table></div>
+      </vs-tab>
+    </vs-tabs>
   </div>
-</template>
+ </div>
+ </template>
 
 <script>
-import TreeDropdown from './TreeDropdown.vue'
-import TreeSearchTree from './TreeSearchTree.vue'
-import TreeAsyncTree from './TreeAsyncTree.vue'
-
 export default {
-  components: {
-    TreeDropdown,
-    TreeSearchTree,
-    TreeAsyncTree
-  }
+  data() {
+    return {
+      selected: [],
+      'tableList': [
+        'vs-th: Component',
+        'vs-tr: Component',
+        'vs-td: Component',
+        'thread: Slot',
+        'tbody: Slot',
+        'header: Slot'
+      ],
+      users: [
+        {
+          "id": 1,
+          "customername": "Bret supplier",
+          "price": "100.000$",
+          "type": "",
+          "status": "",
+        },
+         {
+          "id": 2,
+          "customername": "Lao supplier",
+          "price": "100.000$",
+          "type": "",
+          "status": "",
+        }, {
+          "id": 3,
+          "customername": "Bret sup",
+          "price": "100.000$",
+          "type": "",
+          "status": "",
+        }, {
+          "id": 4,
+          "customername": "Lao supplier",
+          "price": "100.000$",
+          "type": "",
+          "status": "",
+        }, {
+          "id": 5,
+          "customername": "gogo sup",
+          "price": "100.000$",
+          "type": "",
+          "status": "",
+        }, {
+          "id": 6,
+          "customername": "supplierz",
+          "price": "100.000$",
+          "type": "",
+          "status": "",
+        },
+      ]
+    }
+  },
 }
-</script>
+</script>      
+<style lang="scss">
+@import "@/assets/scss/vuexy/pages/loading.scss";
+</style>
