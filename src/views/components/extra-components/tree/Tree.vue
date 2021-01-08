@@ -1,20 +1,23 @@
+
 <template>
 
  <div>
   <div class="mt-5">
     
     <vs-tabs alignment="fixed">
-      <vs-tab label="Request">
+      <vs-tab label="Request payment">
         <div><div>
-      <vs-table pagination max-items="7" search :data="users">
+      <vs-table  pagination max-items="7" search :data="users">
 
-     <template slot="thead">
+    <template slot="thead">
       <vs-th sort-key="email">ID</vs-th>
-      <vs-th sort-key="username">Supplier name</vs-th>
-      <vs-th sort-key="website">Price</vs-th>
-      <vs-th sort-key="id">Type</vs-th>
-      <vs-th sort-key="id">Status</vs-th>
- 
+      <vs-th sort-key="id">Project</vs-th>
+      <vs-th sort-key="username">Customer name</vs-th>
+      <vs-th sort-key="id">Address</vs-th>
+      <vs-th sort-key="website">Office number</vs-th>
+      <vs-th sort-key="id">Contact person</vs-th>
+      <vs-th sort-key="id">Contact number</vs-th>
+      <vs-th sort-key="id">Status</vs-th> 
     </template>
     <template slot-scope="{data}">
       <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
@@ -22,20 +25,33 @@
         <vs-td :data="data[indextr].id">
           {{ data[indextr].id }}
         </vs-td>
-         <vs-td :data="data[indextr].customername">
-          {{ data[indextr].customername }}
+       <vs-td :data="data[indextr].project">
+          {{ data[indextr].project }}
+        </vs-td>
+         <vs-td :data="data[indextr].attendto">
+          {{ data[indextr].attendto }}
+        </vs-td>
+         <vs-td :data="data[indextr].addressnumber">
+          {{ data[indextr].addressnumber }}
         </vs-td>
 
-        <vs-td :data="data[indextr].price">
-          {{ data[indextr].price }}
+        <vs-td :data="data[indextr].officenumber">
+          {{ data[indextr].officenumber}}
         </vs-td>
 
-        <vs-td :data="data[indextr].type">
-          {{ data[indextr].type }}
+        <vs-td :data="data[indextr].contactperson">
+          {{ data[indextr].contactperson }}
         </vs-td>
-        <vs-td :data="data[indextr].status">
+        <vs-td :data="data[indextr].tel">
+          {{ data[indextr].tel }}
+        </vs-td>
+          <vs-td :data="data[indextr].status">
+                 <vs-chip color="warning">
+                 Onhold
+                 </vs-chip>
           {{ data[indextr].status }}
         </vs-td>
+          <vs-button type="line">Detail</vs-button>
       </vs-tr>
     </template>
   </vs-table>
@@ -44,13 +60,15 @@
       <vs-tab label="Request already">
         <div> <vs-table   pagination max-items="7" search :data="users">
 
-    <template slot="thead">
+     <template slot="thead">
       <vs-th sort-key="email">ID</vs-th>
+      <vs-th sort-key="id">Project</vs-th>
       <vs-th sort-key="username">Customer name</vs-th>
-      <vs-th sort-key="website">Price</vs-th>
-      <vs-th sort-key="id">Type</vs-th>
+      <vs-th sort-key="id">Address</vs-th>
+      <vs-th sort-key="website">Office number</vs-th>
+      <vs-th sort-key="id">Contact person</vs-th>
+      <vs-th sort-key="id">Contact number</vs-th>
       <vs-th sort-key="id">Status</vs-th>
- 
     </template>
     <template slot-scope="{data}">
       <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
@@ -58,20 +76,33 @@
         <vs-td :data="data[indextr].id">
           {{ data[indextr].id }}
         </vs-td>
-         <vs-td :data="data[indextr].customername">
-          {{ data[indextr].customername }}
+          <vs-td :data="data[indextr].project">
+          {{ data[indextr].project }}
+        </vs-td>
+         <vs-td :data="data[indextr].attendto">
+          {{ data[indextr].attendto }}
+        </vs-td>
+         <vs-td :data="data[indextr].addressnumber">
+          {{ data[indextr].addressnumber }}
         </vs-td>
 
-        <vs-td :data="data[indextr].price">
-          {{ data[indextr].price }}
+        <vs-td :data="data[indextr].officenumber">
+          {{ data[indextr].officenumber}}
         </vs-td>
 
-        <vs-td :data="data[indextr].type">
-          {{ data[indextr].type }}
+        <vs-td :data="data[indextr].contactperson">
+          {{ data[indextr].contactperson }}
+        </vs-td>
+        <vs-td :data="data[indextr].tel">
+          {{ data[indextr].tel }}
         </vs-td>
         <vs-td :data="data[indextr].status">
+                 <vs-chip color="success">
+                 Paid
+                 </vs-chip>
           {{ data[indextr].status }}
         </vs-td>
+          <vs-button type="line">Detail</vs-button>
       </vs-tr>
     </template>
   </vs-table></div>
@@ -97,47 +128,55 @@ export default {
       users: [
         {
           "id": 1,
-          "customername": "Bret supplier",
-          "price": "100.000$",
-          "type": "",
-          "status": "",
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
+          "tel": "02058788888",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
         },
-         {
+       {
           "id": 2,
-          "customername": "Lao supplier",
-          "price": "100.000$",
-          "type": "",
-          "status": "",
+          "attendto": "Leanne X",
+          "addressnumber": "Laos",
+          "officenumber": "31234",
+          "contactperson": "Sincersde@april.biz",
+          "tel": "02058778888",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICKX PROJECT", 
         }, {
           "id": 3,
-          "customername": "Bret sup",
-          "price": "100.000$",
-          "type": "",
-          "status": "",
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
+          "tel": "02058788888",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
         }, {
           "id": 4,
-          "customername": "Lao supplier",
-          "price": "100.000$",
-          "type": "",
-          "status": "",
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
+          "tel": "02058788888",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
         }, {
           "id": 5,
-          "customername": "gogo sup",
-          "price": "100.000$",
-          "type": "",
-          "status": "",
-        }, {
-          "id": 6,
-          "customername": "supplierz",
-          "price": "100.000$",
-          "type": "",
-          "status": "",
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
+          "tel": "02058788888",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
         },
       ]
     }
   },
 }
 </script>      
-<style lang="scss">
-@import "@/assets/scss/vuexy/pages/loading.scss";
+<style>
 </style>

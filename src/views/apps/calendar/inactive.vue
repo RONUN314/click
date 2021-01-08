@@ -10,9 +10,9 @@
     <vs-button  @click="$router.push('/apps/email')" type="filled">CFO finance</vs-button>
   </vs-col>
   <vs-col  vs-type="flex" vs-justify="center" vs-align="center" vs-w="2">
-     <vs-button type="filled">Don't have  product</vs-button>
+     <vs-button @click="$router.push('/')" type="filled">Don't have  product</vs-button>
   </vs-col><vs-col  vs-type="flex" vs-justify="center" vs-align="center" vs-w="2">
-    <vs-button @click="$router.push('/apps/calendar/inactive')" type="filled">Inactive product</vs-button>
+    <vs-button type="relief">Inactive product</vs-button>
   </vs-col>
 </vs-row>
    
@@ -38,16 +38,16 @@
         </vs-td>
 
         <vs-td :data="data[indextr].status">
-                 <vs-chip color="success">
-                 Active price
+                 <vs-chip color="warning">
+                 Inactive
                  </vs-chip>
           {{ data[indextr].status }}
         </vs-td>
-          <vs-button type="line">Update price</vs-button>
+         <vs-button type="line" color="warning">Update price</vs-button>
       </vs-tr>
     </template>
   </vs-table>
-  <vs-button @click="$router.push('/extensions/clipboard')" type="filled" >Back</vs-button>
+  <vs-button @click="$router.push( '/apps/calendar/vue-simple-calendar')" type="filled" >Back</vs-button>
  </div>
  </template>
 

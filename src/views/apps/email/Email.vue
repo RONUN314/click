@@ -10,9 +10,9 @@
     <vs-button type="relief">CFO finance</vs-button>
   </vs-col>
   <vs-col  vs-type="flex" vs-justify="center" vs-align="center" vs-w="2">
-     <vs-button type="gradient">Don't have  product</vs-button>
+     <vs-button type="filled">Don't have  product</vs-button>
   </vs-col><vs-col  vs-type="flex" vs-justify="center" vs-align="center" vs-w="2">
-    <vs-button type="gradient">Inactive product</vs-button>
+    <vs-button type="filled">Inactive product</vs-button>
   </vs-col>
 </vs-row>
    

@@ -11,15 +11,13 @@
 
     <template slot="thead">
       <vs-th sort-key="email">ID</vs-th>
-      <vs-th sort-key="username">Contact person</vs-th>
-      <vs-th sort-key="website">Product name</vs-th>
-      <vs-th sort-key="id">Email</vs-th>
-      <vs-th sort-key="id">Tel</vs-th>
-      <vs-th sort-key="id">Status</vs-th>
-      <vs-th sort-key="id">Price</vs-th>
-      <vs-th sort-key="id">Start date</vs-th>
-      <vs-th sort-key="id">End date</vs-th>
-
+      <vs-th sort-key="id">Project</vs-th>
+      <vs-th sort-key="username">Customer name</vs-th>
+      <vs-th sort-key="id">Address</vs-th>
+      <vs-th sort-key="website">Office number</vs-th>
+      <vs-th sort-key="id">Contact person</vs-th>
+      <vs-th sort-key="id">Contact number</vs-th>
+      <vs-th sort-key="id">Email</vs-th> 
     </template>
     <template slot-scope="{data}">
       <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
@@ -27,88 +25,78 @@
         <vs-td :data="data[indextr].id">
           {{ data[indextr].id }}
         </vs-td>
-         <vs-td :data="data[indextr].contactperson">
+       <vs-td :data="data[indextr].project">
+          {{ data[indextr].project }}
+        </vs-td>
+         <vs-td :data="data[indextr].attendto">
+          {{ data[indextr].attendto }}
+        </vs-td>
+         <vs-td :data="data[indextr].addressnumber">
+          {{ data[indextr].addressnumber }}
+        </vs-td>
+
+        <vs-td :data="data[indextr].officenumber">
+          {{ data[indextr].officenumber}}
+        </vs-td>
+
+        <vs-td :data="data[indextr].contactperson">
           {{ data[indextr].contactperson }}
-        </vs-td>
-
-        <vs-td :data="data[indextr].productname">
-          {{ data[indextr].productname }}
-        </vs-td>
-
-        <vs-td :data="data[indextr].email">
-          {{ data[indextr].email }}
         </vs-td>
         <vs-td :data="data[indextr].tel">
           {{ data[indextr].tel }}
         </vs-td>
-          <vs-td :data="data[indextr].status">
-          {{ data[indextr].status }}
+          <vs-td :data="data[indextr].email">
+          {{ data[indextr].email }}
         </vs-td>
-
-        <vs-td :data="data[indextr].price">
-          {{ data[indextr].price }}
-        </vs-td>
-        <vs-td :data="data[indextr].startdate">
-          {{ data[indextr].startdate }}
-        </vs-td>
-        <vs-td :data="data[indextr].enddate">
-          {{ data[indextr].enddate }}
-        </vs-td>
-
+          <vs-button type="line">Detail</vs-button>
       </vs-tr>
     </template>
   </vs-table>
    </div></div>
       </vs-tab>
       <vs-tab label="Quotation already">
-        <div> <vs-table multiple v-model="selected" pagination max-items="7" search :data="users">
+        <div> <vs-table  pagination max-items="7" search :data="users">
 
-    <template slot="thead">
+     <template slot="thead">
       <vs-th sort-key="email">ID</vs-th>
-      <vs-th sort-key="username">Contact person</vs-th>
-      <vs-th sort-key="website">Product name</vs-th>
+      <vs-th sort-key="id">Project</vs-th>
+      <vs-th sort-key="username">Customer name</vs-th>
+      <vs-th sort-key="id">Address</vs-th>
+      <vs-th sort-key="website">Office number</vs-th>
+      <vs-th sort-key="id">Contact person</vs-th>
+      <vs-th sort-key="id">Contact number</vs-th>
       <vs-th sort-key="id">Email</vs-th>
-      <vs-th sort-key="id">Tel</vs-th>
-      <vs-th sort-key="id">Status</vs-th>
-      <vs-th sort-key="id">Price</vs-th>
-      <vs-th sort-key="id">Start date</vs-th>
-      <vs-th sort-key="id">End date</vs-th>
-
     </template>
     <template slot-scope="{data}">
-      <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
+      <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data" >
 
         <vs-td :data="data[indextr].id">
           {{ data[indextr].id }}
         </vs-td>
-         <vs-td :data="data[indextr].contactperson">
+          <vs-td :data="data[indextr].project">
+          {{ data[indextr].project }}
+        </vs-td>
+         <vs-td :data="data[indextr].attendto">
+          {{ data[indextr].attendto }}
+        </vs-td>
+         <vs-td :data="data[indextr].addressnumber">
+          {{ data[indextr].addressnumber }}
+        </vs-td>
+
+        <vs-td :data="data[indextr].officenumber">
+          {{ data[indextr].officenumber}}
+        </vs-td>
+
+        <vs-td :data="data[indextr].contactperson">
           {{ data[indextr].contactperson }}
-        </vs-td>
-
-        <vs-td :data="data[indextr].productname">
-          {{ data[indextr].productname }}
-        </vs-td>
-
-        <vs-td :data="data[indextr].email">
-          {{ data[indextr].email }}
         </vs-td>
         <vs-td :data="data[indextr].tel">
           {{ data[indextr].tel }}
         </vs-td>
-          <vs-td :data="data[indextr].status">
-          {{ data[indextr].status }}
+          <vs-td :data="data[indextr].email">
+          {{ data[indextr].email }}
         </vs-td>
-
-        <vs-td :data="data[indextr].price">
-          {{ data[indextr].price }}
-        </vs-td>
-        <vs-td :data="data[indextr].startdate">
-          {{ data[indextr].startdate }}
-        </vs-td>
-        <vs-td :data="data[indextr].enddate">
-          {{ data[indextr].enddate }}
-        </vs-td>
-
+          <vs-button type="line">Detail</vs-button>
       </vs-tr>
     </template>
   </vs-table></div>
@@ -135,65 +123,50 @@ export default {
       users: [
         {
           "id": 1,
-          "contactperson": "Leanne Graham",
-          "productname": "Bret",
-          "email": "Sincere@april.biz",
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
           "tel": "02058788888",
-          "status": "",
-          "price": "50.000$",
-          "startdate": "17/10/2020",
-          "enddate": "02/01/2021",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
         },
        {
-          "id": 1,
-          "contactperson": "Leanne Graham",
-          "productname": "Bret",
-          "email": "Sincere@april.biz",
-          "tel": "02058788888",
-          "status": "",
-          "price": "50.000$",
-          "startdate": "17/10/2020",
-          "enddate": "02/01/2021",
-        }, {
           "id": 2,
-          "contactperson": "Leanne Graham",
-          "productname": "Bret",
-          "email": "Sincere@april.biz",
-          "tel": "02058788888",
-          "status": "",
-          "price": "50.000$",
-          "startdate": "17/10/2020",
-          "enddate": "02/01/2021",
+          "attendto": "Leanne X",
+          "addressnumber": "Laos",
+          "officenumber": "31234",
+          "contactperson": "Sincersde@april.biz",
+          "tel": "02058778888",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICKX PROJECT", 
         }, {
           "id": 3,
-          "contactperson": "Leanne Graham",
-          "productname": "Bret",
-          "email": "Sincere@april.biz",
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
           "tel": "02058788888",
-          "status": "",
-          "price": "50.000$",
-          "startdate": "17/10/2020",
-          "enddate": "02/01/2021",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
         }, {
           "id": 4,
-          "contactperson": "Leanne Graham",
-          "productname": "Bret",
-          "email": "Sincere@april.biz",
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
           "tel": "02058788888",
-          "status": "",
-          "price": "50.000$",
-          "startdate": "17/10/2020",
-          "enddate": "02/01/2021",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
         }, {
           "id": 5,
-          "contactperson": "Leanne Graham",
-          "productname": "Bret",
-          "email": "Sincere@april.biz",
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
           "tel": "02058788888",
-          "status": "",
-          "price": "50.000$",
-          "startdate": "17/10/2020",
-          "enddate": "02/01/2021",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
         },
       ]
     }

@@ -123,6 +123,16 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/apps/calendar/inactive',
+                    name: 'inactive',
+                    component: () =>
+                        import ('./views/apps/calendar/inactive.vue'),
+                    meta: {
+                        rule: 'editor',
+                        no_scroll: true
+                    }
+                },
+                {
                     path: '/apps/eCommerce/shop',
                     name: 'ecommerce-shop',
                     component: () =>
@@ -1242,6 +1252,16 @@ const router = new Router({
                 {
                     path: '/extensions/clipboard',
                     name: 'extra-component-clipboard',
+                    component: () =>
+                        import ('@/views/components/extra-components/clipboard/Clipboard.vue'),
+                    meta: {
+
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/apps/calendar/inactive',
+                    name: 'extra-component-inactive',
                     component: () =>
                         import ('@/views/components/extra-components/clipboard/Clipboard.vue'),
                     meta: {
