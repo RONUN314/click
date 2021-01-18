@@ -92,11 +92,11 @@ Vue.use(VeeValidate)
 // Google Maps
 import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.use(VueGoogleMaps, {
-  load: {
-    // Add your API key here
-    key: 'YOUR_KEY',
-    libraries: 'places' // This is required if you use the Auto complete plug-in
-  }
+    load: {
+        // Add your API key here
+        key: 'YOUR_KEY',
+        libraries: 'places' // This is required if you use the Auto complete plug-in
+    }
 })
 
 // Vuejs - Vue wrapper for hammerjs
@@ -124,10 +124,10 @@ require('./assets/css/iconfont.css')
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  i18n,
-  acl,
-  vuetify,
-  render: h => h(App)
+    router,
+    store,
+    i18n,
+    acl,
+    vuetify,
+    render: h => h(App)
 }).$mount('#app')

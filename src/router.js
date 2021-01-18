@@ -500,12 +500,7 @@ const router = new Router({
                     component: () =>
                         import ('@/views/components/vuesax/button-group/ButtonGroup.vue'),
                     meta: {
-                        breadcrumb: [
-                            { title: 'Home', url: '/' },
-                            { title: 'Components' },
-                            { title: 'Button Group', active: true }
-                        ],
-                        pageTitle: 'Button Group',
+
                         rule: 'editor'
                     }
                 },
@@ -530,12 +525,7 @@ const router = new Router({
                     component: () =>
                         import ('@/views/components/vuesax/collapse/Collapse.vue'),
                     meta: {
-                        breadcrumb: [
-                            { title: 'Home', url: '/' },
-                            { title: 'Components' },
-                            { title: 'Collapse', active: true }
-                        ],
-                        pageTitle: 'Collapse',
+
                         rule: 'editor'
                     }
                 },

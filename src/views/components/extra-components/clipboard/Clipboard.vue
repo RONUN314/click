@@ -121,7 +121,16 @@ export default {
         'header: Slot'
       ],
       users: [
-        {
+       {
+          "id": 1,
+          "attendto": "Leanne Graham",
+          "addressnumber": "Laos",
+          "officenumber": "31524",
+          "contactperson": "Sincere@april.biz",
+          "tel": "02058788888",
+          "email": "mrclickx@gmail.la",
+          "project": "CLICK PROJECT", 
+        },   {
           "id": 1,
           "attendto": "Leanne Graham",
           "addressnumber": "Laos",
