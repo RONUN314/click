@@ -650,12 +650,6 @@ const router = new Router({
                     component: () =>
                         import ('@/views/components/vuesax/popup/Popup.vue'),
                     meta: {
-                        breadcrumb: [
-                            { title: 'Home', url: '/' },
-                            { title: 'Components' },
-                            { title: 'Popup', active: true }
-                        ],
-                        pageTitle: 'Popup',
                         rule: 'editor'
                     }
                 },
@@ -763,12 +757,7 @@ const router = new Router({
                     component: () =>
                         import ('./views/forms/form-elements/select/Select.vue'),
                     meta: {
-                        breadcrumb: [
-                            { title: 'Home', url: '/' },
-                            { title: 'Form Elements' },
-                            { title: 'Select', active: true }
-                        ],
-                        pageTitle: 'Select',
+                        pageTitle: 'Project Detail',
                         rule: 'editor'
                     }
                 },

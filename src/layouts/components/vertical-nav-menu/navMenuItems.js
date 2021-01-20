@@ -314,7 +314,7 @@ export default [
                         url: '/components/collapse',
                         name: 'Collapse',
                         slug: 'component-collapse',
-                        i18n: 'Product Require'
+                        i18n: 'Product Requests'
                     },
                     // {
                     //   url: '/components/dialogs',
