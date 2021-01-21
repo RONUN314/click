@@ -504,6 +504,7 @@ const router = new Router({
                         rule: 'editor'
                     }
                 },
+
                 {
                     path: '/components/chip',
                     name: 'component-chip',
@@ -758,6 +759,26 @@ const router = new Router({
                         import ('./views/forms/form-elements/select/Select.vue'),
                     meta: {
                         pageTitle: 'Project Detail',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/forms/form-elements/select/fnec',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/fnec.vue'),
+                    meta: {
+                        pageTitle: 'Finance estimation cost',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/forms/form-elements/select/requestpaymentpro',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/requestpaymentpro.vue'),
+                    meta: {
+                        pageTitle: 'Request Payment',
                         rule: 'editor'
                     }
                 },

@@ -274,7 +274,7 @@ export default [
                         i18n: 'Supplier selection'
                     },
                     {
-                        url: '/components/alert',
+                        url: '/forms/form-elements/select/requestpaymentpro',
                         name: 'Alert',
                         slug: 'component-alert',
                         i18n: 'Request Payment'

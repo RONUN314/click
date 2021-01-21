@@ -184,13 +184,13 @@
     </vs-table>
     <vs-row>
       <vs-col vs-type="flex" vs-justify="left" vs-align="center" vs-w="6">
-        <vs-button @click="$router.go(-1)" type="filled">Back</vs-button>
+        <vs-button     text-color="#ffffff" @click="$router.go(-1)" type="filled">Back</vs-button>
       </vs-col>
       <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="6">
-        <vs-button
-          @click="$router.push('/apps/calendar/inactive')"
+        <vs-button    text-color="#ffffff"
+          @click="$router.push('/forms/form-elements/select/fnec')"
           type="filled"
-          >Product request</vs-button
+          >Finance estimation cost</vs-button
         >
       </vs-col>
     </vs-row>
