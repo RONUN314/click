@@ -494,16 +494,17 @@ const router = new Router({
                         rule: 'editor'
                     }
                 },
-                {
-                    path: '/components/button-group',
-                    name: 'component-button-group',
-                    component: () =>
-                        import ('@/views/components/vuesax/button-group/ButtonGroup.vue'),
-                    meta: {
+                // {
+                //     path: '/components/button-group',
+                //     name: 'component-button-group',
+                //     component: () =>
+                //         import ('@/views/components/vuesax/button-group/ButtonGroup.vue'),
+                //     meta: {
 
-                        rule: 'editor'
-                    }
-                },
+                //         rule: 'editor'
+                //     }
+                // },
+
 
                 {
                     path: '/components/chip',
@@ -773,12 +774,43 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/forms/form-elements/select/deliveryproduct',
+
+                    name: 'delivery product',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/deliveryproduct.vue'),
+                    meta: {
+                        pageTitle: 'Delivery Product',
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/forms/form-elements/select/requestpaymentpro',
                     name: 'form-estimation',
                     component: () =>
                         import ('./views/forms/form-elements/select/requestpaymentpro.vue'),
                     meta: {
                         pageTitle: 'Request Payment',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/forms/form-elements/select/deliveryproduct',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/deliveryproduct.vue'),
+                    meta: {
+                        pageTitle: 'Delivery product',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/forms/form-elements/select/productprocurement',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/productprocurement.vue'),
+                    meta: {
+                        pageTitle: 'Product',
                         rule: 'editor'
                     }
                 },

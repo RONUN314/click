@@ -279,6 +279,7 @@ export default [
                         slug: 'component-alert',
                         i18n: 'Request Payment'
                     },
+
                     {
                         url: '/components/avatar',
                         name: 'Avatar',
@@ -298,7 +299,7 @@ export default [
                         i18n: 'Product'
                     },
                     {
-                        url: '/components/button-group',
+                        url: '/forms/form-elements/select/deliveryproduct',
                         name: 'Button Group',
                         slug: 'component-button-group',
                         i18n: 'Delivery Products'
