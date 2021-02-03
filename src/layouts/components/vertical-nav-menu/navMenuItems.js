@@ -147,10 +147,10 @@ export default [
                     },
                     {
                         url: '/extensions/access-control',
-                       name: 'Access Control',
-                      slug: 'extra-component-access-control',
-                       i18n: 'Sale/marketing manager'
-                      },
+                        name: 'Access Control',
+                        slug: 'extra-component-access-control',
+                        i18n: 'Sale/marketing manager'
+                    },
                     {
                         url: '/ui-elements/colors',
                         name: 'minute of meeting',
@@ -268,6 +268,12 @@ export default [
                         i18n: 'Project'
                     },
                     {
+                        url: '/forms/form-elements/select/brieform',
+                        name: 'Brief form',
+                        slug: 'component-drop-down',
+                        i18n: 'Brief form'
+                    },
+                    {
                         url: '/components/tabs',
                         name: 'Tabs',
                         slug: 'component-tabs',
@@ -329,12 +335,7 @@ export default [
                     //   slug: 'component-divider',
                     //   i18n: 'Divider'
                     // },
-                    // {
-                    //   url: '/components/dropdown',
-                    //   name: 'DropDown',
-                    //   slug: 'component-drop-down',
-                    //   i18n: 'DropDown'
-                    // },
+
                     // {
                     //   url: '/components/list',
                     //   name: 'List',
@@ -409,49 +410,44 @@ export default [
                 name: 'Extensions',
                 icon: 'PlusCircleIcon',
                 i18n: 'Design',
-                submenu: [
-                  {
-                    url: '/extensions/select',
-                    name: 'Select',
-                    icon: 'PocketIcon',
-                    slug: 'extra-component-select',
-                    i18n: 'Upload Artwork'
-                  },
-                  
-                 
-                   ]
-                
-              },
-              {
+                submenu: [{
+                        url: '/ui-elements/data-list/thumb-view',
+                        name: 'Select',
+                        icon: 'PocketIcon',
+                        slug: 'extra-component-select',
+                        i18n: 'Upload Artwork'
+                    },
+
+
+                ]
+
+            },
+            {
                 url: null,
                 name: 'Support',
                 icon: 'ShoppingCartIcon',
                 i18n: 'Supplier manager',
-                submenu: [
-                  {
-                    url: 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/documentation/',
-                    name: 'Documentation',
-                    icon: 'BookOpenIcon',
-                    slug: 'external',
-                    i18n: 'Documentation',
-                    target: '_blank'
-                  },
-                  {
-                    url: 'https://pixinvent.ticksy.com/',
-                    name: 'Raise Support',
-                    icon: 'LifeBuoyIcon',
-                    slug: 'external',
-                    i18n: 'RaiseSupport',
-                    target: '_blank'
-                  }
+                submenu: [{
+                        url: 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/documentation/',
+                        name: 'Documentation',
+                        icon: 'BookOpenIcon',
+                        slug: 'external',
+                        i18n: 'Documentation',
+                        target: '_blank'
+                    },
+                    {
+                        url: 'https://pixinvent.ticksy.com/',
+                        name: 'Raise Support',
+                        icon: 'LifeBuoyIcon',
+                        slug: 'external',
+                        i18n: 'RaiseSupport',
+                        target: '_blank'
+                    }
                 ]
-              }
-            ]
-          },
-          
-          
-          
+            }
         ]
-        
-        
-           
+    },
+
+
+
+]

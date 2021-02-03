@@ -7,7 +7,7 @@
     <vs-tabs alignment="fixed">
       <vs-tab label="Quotation">
         <div><div>
-      <vs-table multiple v-model="selected" pagination max-items="7" search :data="users">
+      <vs-table   pagination max-items="7" search :data="users">
 
     <template slot="thead">
       <vs-th sort-key="email">ID</vs-th>
@@ -103,7 +103,7 @@
       </vs-tab>
     </vs-tabs>
   </div>
-  <vs-button @click="$router.push('/apps/calendar/vue-simple-calendar')" type="filled" >Product</vs-button>
+  <vs-button @click="$router.push('/apps/calendar/vue-simple-calendar')" type="filled" >Create Quotation</vs-button>
  </div>
  </template>
 

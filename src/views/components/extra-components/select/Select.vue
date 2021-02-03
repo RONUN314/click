@@ -5,9 +5,9 @@
 <script>
 export default {
 
-}
-</script>
+    }
+    </script>
 
-<style>
+    <style>
 
-</style>
+    </style>

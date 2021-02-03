@@ -537,7 +537,7 @@ const router = new Router({
                     component: () =>
                         import ('@/views/components/vuesax/dialogs/Dialogs.vue'),
                     meta: {
-                        
+
                         rule: 'editor'
                     }
                 },
@@ -780,12 +780,33 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/forms/form-elements/select/deliverytime',
+
+                    name: 'delivery product',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/deliverytime.vue'),
+                    meta: {
+                        pageTitle: 'Delivery Product',
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/forms/form-elements/select/requestpaymentpro',
                     name: 'form-estimation',
                     component: () =>
                         import ('./views/forms/form-elements/select/requestpaymentpro.vue'),
                     meta: {
                         pageTitle: 'Request Payment',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/forms/form-elements/select/brieform',
+                    name: 'form-estsimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/brieform.vue'),
+                    meta: {
+                        pageTitle: 'Brief Form',
                         rule: 'editor'
                     }
                 },
