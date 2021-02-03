@@ -769,6 +769,46 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/forms/form-elements/select/cfodashboard',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/cfodashboard.vue'),
+                    meta: {
+
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/forms/form-elements/select/cfoapprove',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/cfoapprove.vue'),
+                    meta: {
+
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/forms/form-elements/select/itemdetail',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/itemdetail.vue'),
+                    meta: {
+
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/forms/form-elements/select/supplierlist',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/supplierlist.vue'),
+                    meta: {
+
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/forms/form-elements/select/payment',
                     name: 'form-estimation',
                     component: () =>

@@ -41,7 +41,6 @@
           {{ data[indextr].status }}
         </vs-td>
  <vs-button @click="$router.push('/forms/form-elements/select')" type="line">Details</vs-button>
-       
       </vs-tr>
     </template>
   </vs-table>

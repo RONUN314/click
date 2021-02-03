@@ -120,13 +120,13 @@ export default [
                 icon: 'LayoutIcon',
                 i18n: 'CFO',
                 submenu: [{
-                        url: '/ui-elements/grid/vuesax',
+                        url: '/forms/form-elements/select/cfodashboard',
                         name: 'Vuesax',
                         slug: 'grid-vuesax',
                         i18n: 'Dashboard'
                     },
                     {
-                        url: '/ui-elements/grid/tailwind',
+                        url: '/forms/form-elements/select/cfoapprove',
                         name: 'Tailwind',
                         slug: 'grid-tailwind',
                         i18n: 'CFO Approvement'
@@ -428,22 +428,16 @@ export default [
                 icon: 'ShoppingCartIcon',
                 i18n: 'Supplier manager',
                 submenu: [{
-                        url: 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/documentation/',
-                        name: 'Documentation',
-                        icon: 'BookOpenIcon',
-                        slug: 'external',
-                        i18n: 'Documentation',
-                        target: '_blank'
-                    },
-                    {
-                        url: 'https://pixinvent.ticksy.com/',
-                        name: 'Raise Support',
-                        icon: 'LifeBuoyIcon',
-                        slug: 'external',
-                        i18n: 'RaiseSupport',
-                        target: '_blank'
-                    }
-                ]
+                    url: '/forms/form-elements/select/supplierlist',
+                    name: 'Button Group',
+                    slug: 'component-button-group',
+                    i18n: 'Supplier list'
+                }, {
+                    url: '/forms/form-elements/select/itemdetail',
+                    name: 'Button Group',
+                    slug: 'component-button-group',
+                    i18n: 'Item details'
+                }]
             }
         ]
     },
