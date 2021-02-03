@@ -769,6 +769,16 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/forms/form-elements/select/payment',
+                    name: 'form-estimation',
+                    component: () =>
+                        import ('./views/forms/form-elements/select/payment.vue'),
+                    meta: {
+                        pageTitle: 'Payment',
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/forms/form-elements/select/deliveryproduct',
 
                     name: 'delivery product',

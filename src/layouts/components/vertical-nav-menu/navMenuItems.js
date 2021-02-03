@@ -234,7 +234,7 @@ export default [
                         i18n: 'Invoice'
                     },
                     {
-                        url: '/extensions/star-ratings',
+                        url: '/forms/form-elements/select/payment',
                         name: 'Star Ratings',
                         icon: 'StarIcon',
                         slug: 'extra-component-star-ratings',

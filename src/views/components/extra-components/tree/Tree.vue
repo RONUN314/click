@@ -13,7 +13,6 @@
       <vs-th sort-key="email">ID</vs-th>
       <vs-th sort-key="id">Project</vs-th>
       <vs-th sort-key="username">Customer name</vs-th>
-      <vs-th sort-key="id">Address</vs-th>
       <vs-th sort-key="website">Office number</vs-th>
       <vs-th sort-key="id">Contact person</vs-th>
       <vs-th sort-key="id">Contact number</vs-th>
@@ -31,10 +30,6 @@
          <vs-td :data="data[indextr].attendto">
           {{ data[indextr].attendto }}
         </vs-td>
-         <vs-td :data="data[indextr].addressnumber">
-          {{ data[indextr].addressnumber }}
-        </vs-td>
-
         <vs-td :data="data[indextr].officenumber">
           {{ data[indextr].officenumber}}
         </vs-td>
@@ -64,7 +59,6 @@
       <vs-th sort-key="email">ID</vs-th>
       <vs-th sort-key="id">Project</vs-th>
       <vs-th sort-key="username">Customer name</vs-th>
-      <vs-th sort-key="id">Address</vs-th>
       <vs-th sort-key="website">Office number</vs-th>
       <vs-th sort-key="id">Contact person</vs-th>
       <vs-th sort-key="id">Contact number</vs-th>
@@ -82,10 +76,6 @@
          <vs-td :data="data[indextr].attendto">
           {{ data[indextr].attendto }}
         </vs-td>
-         <vs-td :data="data[indextr].addressnumber">
-          {{ data[indextr].addressnumber }}
-        </vs-td>
-
         <vs-td :data="data[indextr].officenumber">
           {{ data[indextr].officenumber}}
         </vs-td>
